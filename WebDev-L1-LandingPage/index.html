@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover creative ideas, inspiring experiences, and your next big adventure.">
+  <title>Elevate — Explore What's Possible</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#home">elevate<span>.</span></a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+
+      <div class="hero-content container">
+        <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+        <h1>Dream bigger.<br><span>Go beyond.</span></h1>
+        <p class="hero-description">
+          Great things begin when you take the first step.
+          Discover new possibilities and turn your ideas into something remarkable.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#features">Explore More ↗</a>
+          <a class="button button-secondary" href="#about">Our Story</a>
+        </div>
+
+        <div class="hero-note">
+          <span class="status-dot"></span>
+          A little inspiration for your everyday
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="art-card">
+          <span class="art-spark">✳</span>
+          <span class="art-label">MAKE IT</span>
+          <strong>HAPPEN.</strong>
+          <span class="art-caption">Your potential is limitless.</span>
+        </div>
+        <span class="floating-star star-one">✦</span>
+        <span class="floating-star star-two">✧</span>
+        <span class="floating-circle"></span>
+      </div>
+    </section>
+
+    <section class="about section container" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">A DIFFERENT PERSPECTIVE</p>
+        <h2>Small beginnings.<br><span>Extraordinary outcomes.</span></h2>
+      </div>
+
+      <p class="about-copy">
+        Elevate is built around a simple idea: every big achievement starts
+        with curiosity, courage, and the willingness to try. Take a moment
+        to explore what inspires you and create your own path forward.
+      </p>
+    </section>
+
+    <section class="features section" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT MOVES YOU FORWARD</p>
+          <h2>Make room for <span>possibility.</span></h2>
+          <p class="section-description">
+            Three simple principles to bring your next big idea to life.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <div class="feature-icon">✳</div>
+            <h3>Imagine</h3>
+            <p>Start with a curious mind. Give your ideas the space to grow into something new.</p>
+            <a href="#contact" class="text-link">Find inspiration ↗</a>
+          </article>
+
+          <article class="feature-card featured-card">
+            <span class="feature-number">02</span>
+            <div class="feature-icon">↗</div>
+            <h3>Create</h3>
+            <p>Turn thoughts into action with intention, creativity, and a little experimentation.</p>
+            <a href="#contact" class="text-link">Start creating ↗</a>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <div class="feature-icon">✦</div>
+            <h3>Grow</h3>
+            <p>Learn from each step, celebrate progress, and keep reaching for what comes next.</p>
+            <a href="#contact" class="text-link">Keep growing ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section container" id="contact">
+      <div class="contact-panel">
+        <p class="eyebrow">YOUR MOVE</p>
+        <h2>Ready to begin<br>something <span>great?</span></h2>
+        <p>Every journey begins with a decision. Make yours today.</p>
+        <a class="button button-primary" href="mailto:hello@example.com">
+          Say Hello ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="logo" href="#home">elevate<span>.</span></a>
+      <p>Designed with curiosity and a little courage.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+    <p class="copyright">© 2026 Elevate. Created as a web development learning project.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+</body>
+</html>
